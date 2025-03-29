@@ -1,9 +1,11 @@
 package main
 
 import(
-	"fmt"
+	"log"
 )
 
 func main(){
-	fmt.Println("Hello world!")
+	log.Println("starting server...")
+	server := NewAPIServer(":9999")
+	server.Run()
 }
