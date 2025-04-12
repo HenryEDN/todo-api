@@ -5,6 +5,7 @@ PS_PORT=1234
 PS_DB=todo-list
 PS_SSLMODE=disable
 
+
 build:
 	go build -o ./bin/todo-api
 
