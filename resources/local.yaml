@@ -3,11 +3,11 @@ server:
 
 database:
   host: localhost
-  port: 1234
+  port: 9090
   username: admin
   password: admin
   timeout: 10
-  db_name: todo-list
+  db_name: todo-api-db
   sslmode: disable
 
 jwt_secret_key: fsdljfksjflsjfio90f98s798243k5jiu897gihjityw89yt4h5tjhldanfoysa987787sdfuklwjhi3hytjklahgljkzhdsay9382y48056718y4jklfanskljghaskhglaiuyariu

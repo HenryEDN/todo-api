@@ -11,16 +11,6 @@ func main(){
 
 	config := loadConfig("local", "./resources/")
 
-	db, err := CreateDB(*config)
-	if err != nil{
-		log.Fatal(err)
-	}
-
-	err = MigrateUp(db.DBPool)
-	if err != nil{
-		log.Fatal(err)
-	}
-
 	log.Println("starting server...")
 	server := NewAPIServer(fmt.Sprintf(":%v", config.Server.Port))
 	server.Run()
@@ -37,9 +27,9 @@ type Server struct{
 }
 
 type Database struct{
-	Host string `yaml:"host"`
+	Host string `yaml:host`
 	Port string`yaml:"port"`
-	Username string `yaml:"username"`
+	User string `yaml:"username"`
 	Password string `yaml:"password"`
 	Timeout uint64 `yaml:"timeout"`
 	DB_name string `yaml:"db_name"`
