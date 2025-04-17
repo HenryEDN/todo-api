@@ -22,7 +22,7 @@ func main(){
 	}
 
 	log.Println("starting server...")
-	server := NewAPIServer(fmt.Sprintf(":%v", config.Server.Port))
+	server := NewAPIServer(fmt.Sprintf(":%v", config.Server.Port), db)
 	server.Run()
 }
 
